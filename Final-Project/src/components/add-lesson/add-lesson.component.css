@@ -1,0 +1,52 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.form-container {
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+}
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #333;
+}
+
+.black-button {
+    background: black;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* הוספת מעבר חלק */
+    margin-right: 10px; /* הוספת מרווח בין הכפתורים */
+}
+
+.black-button:hover {
+    background-color: #333; /* שינוי רקע בעת מעבר עכבר */
+    transform: translateY(-2px); /* העלאה קלה */
+}
+
+.black-button mat-icon {
+    margin-right: 8px;
+}
+
+.button-container {
+    display: flex; /* כדי שהכפתורים יהיו בשורה */
+    justify-content: flex-start; /* יישור לשמאל */
+}

@@ -1,0 +1,45 @@
+
+
+.about-container {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  color: rgb(8, 8, 8);
+  max-width: 800px;
+  margin:165px;
+  margin-left: 340px;
+  
+
+
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+h2 {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.3em;
+  line-height: 1.6;
+}
+
+.cta {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 20px;
+}

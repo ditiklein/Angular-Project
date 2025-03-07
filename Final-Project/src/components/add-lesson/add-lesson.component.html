@@ -1,0 +1,25 @@
+<div class="body">
+  <form [formGroup]="lessonForm" (ngSubmit)="onSubmit()" class="form-container">
+      <mat-card>
+          <mat-card-content>
+              <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Lesson Name</mat-label>
+                  <input matInput formControlName="title" placeholder="Enter Lesson name">
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>content</mat-label>
+                  <textarea matInput formControlName="content" placeholder="Enter content"></textarea>
+              </mat-form-field>
+          </mat-card-content>
+          <mat-card-actions class="button-container">
+              <button mat-raised-button class="black-button" type="submit" [disabled]="!lessonForm.valid">
+                  <mat-icon>send</mat-icon> Submit
+              </button>
+              <button mat-raised-button class="black-button" type="button" (click)="onCancel()">
+                  <mat-icon>cancel</mat-icon> Cancel
+              </button>
+          </mat-card-actions>
+      </mat-card>
+  </form>
+</div>

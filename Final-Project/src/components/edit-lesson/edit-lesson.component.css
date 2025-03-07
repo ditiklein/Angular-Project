@@ -1,0 +1,90 @@
+.black-button:hover,
+.cancel-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.black-button mat-icon,
+.cancel-button mat-icon {
+  margin-right: 8px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.full-width {
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #333;
+}
+
+input,
+textarea {
+  color: black;
+}
+
+.black-button,
+.cancel-button {
+  background-color: #000;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.black-button:hover,
+.cancel-button:hover {
+  background-color: #333;
+}
+
+.black-button mat-icon,
+.cancel-button mat-icon {
+  margin-right: 8px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.full-width {
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}

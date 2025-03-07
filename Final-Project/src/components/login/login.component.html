@@ -1,0 +1,34 @@
+<div class="body">
+  <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()" class="form-container">
+    <mat-card>
+      <mat-card-content>
+        <div formGroupName="userGroup">
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>email</mat-label>
+            <input matInput type="email" formControlName="email" placeholder="email">
+            @if (addUserForm.get('userGroup.email')?.invalid && addUserForm.get('userGroup.email')?.touched) {
+              <mat-error>
+                Invalid email format.
+              </mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>password</mat-label>
+            <input matInput type="password" formControlName="password" placeholder="password">
+            @if (addUserForm.get('userGroup.password')?.invalid && addUserForm.get('userGroup.password')?.touched) {
+              <mat-error>
+                Password is required.
+              </mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="button-container">
+        <button mat-raised-button color="primary" type="submit">submit</button>
+        <button mat-raised-button class="black-button" (click)="change()">Registration</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>

@@ -1,0 +1,96 @@
+.lessons-list {
+  margin-top: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lessons-list h3 {
+  color: black;
+  margin-bottom: 10px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.lessons-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lesson-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.lessons-list li {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+}
+
+.lessons-list li:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.lesson-icon {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+}
+
+.lesson-info {
+  flex-grow: 1;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.lesson-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.lesson-content {
+  color: #555;
+}
+
+.lesson-actions button {
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 1.2em;
+  transition: 0.3s;
+}
+
+.lesson-actions button:hover {
+  color: #ff5252;
+}
+
+.add-lesson {
+  align-self: flex-start;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 20px; /* הוספת מרווח שמאלי לכפתור */
+}
+
+.add-lesson:hover {
+  background-color: #333;
+}

@@ -1,0 +1,27 @@
+<div class="body">
+  <div class="form-container ">
+    <h2>Edit Lesson</h2>
+    <form [formGroup]="lessonForm">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Lesson Name</mat-label>
+        <input matInput formControlName="title" placeholder="Enter course name">
+        <mat-icon matPrefix>school</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>content</mat-label>
+        <textarea matInput formControlName="content" placeholder="Enter description"></textarea>
+        <mat-icon matPrefix>content</mat-icon>
+      </mat-form-field>
+
+      <div class="button-container">
+        <button mat-raised-button class="black-button" (click)="save()" [disabled]="!lessonForm.valid">
+          <mat-icon>save</mat-icon> Save
+        </button>
+        <button mat-raised-button class="cancel-button" (click)="close()">
+          <mat-icon>cancel</mat-icon> Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

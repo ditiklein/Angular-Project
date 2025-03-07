@@ -1,0 +1,16 @@
+<div class="body">
+  <mat-toolbar class="mat-toolbar">
+    <nav class="menu">
+      <a class="menu-item" [routerLink]="['/navbar', 'home']">
+        <mat-icon>home</mat-icon> Home
+      </a>
+      <a class="menu-item" [routerLink]="['/navbar', 'courses']">
+        <mat-icon>school</mat-icon> Our Course
+      </a>
+      <a class="menu-item" [routerLink]="['/navbar','addCourse']">
+        <mat-icon>add</mat-icon> Add Course
+      </a>
+    </nav>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+</div>

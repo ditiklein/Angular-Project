@@ -1,0 +1,32 @@
+<div class="lessons-list">
+  <h3>{{ course.title }}</h3>
+  <ul>
+    @for (lesson of lessons; track lesson.courseId) {
+    <li>
+      <div class="lesson-icon">
+        <img src="ssss.png" alt="תמונת שיעור">
+      </div>
+      <div class="lesson-info">
+        <span class="lesson-title">{{ lesson.title }}</span>
+        <span class="lesson-content">Content: {{ lesson.content }}</span>
+      </div>
+      @if(role=='teacher')
+      {
+         <div class="lesson-actions">
+        <button mat-icon-button color="primary" (click)="editLesson(lesson)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deleteLesson(lesson)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      }
+     
+    </li>
+    }
+  </ul>
+  <button class="add-lesson" [routerLink]="['/navbar', 'AddLesson', courseId]" mat-raised-button>
+    <mat-icon>add</mat-icon> הוסף שיעור
+  </button>
+</div>
+<router-outlet></router-outlet>
