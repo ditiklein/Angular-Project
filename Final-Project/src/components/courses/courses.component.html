@@ -91,7 +91,7 @@
           </div>
 
           <div class="buttons-container">
-            <button [routerLink]="['/navbar', course.id]" class="black-button">צפה בקורס</button>
+            <button [routerLink]="['/navbar', course.id]" class="black-button">Show course</button>
             @if(role=='teacher') {
               <div class="icon-buttons">
                 <button class="icon-button " (click)="Adit(course.id)"><mat-icon>edit</mat-icon></button>
