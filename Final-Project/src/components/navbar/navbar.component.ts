@@ -17,5 +17,6 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-           letter:string=sessionStorage.getItem('UserName')||''[0]
+           letter:string=sessionStorage.getItem('UserName')||'';
+        
 }
