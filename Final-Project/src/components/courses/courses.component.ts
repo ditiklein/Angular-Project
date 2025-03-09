@@ -46,7 +46,10 @@ export class CoursesComponent implements OnInit {
  
     ngOnInit(): void {
       this.loadCourses();
-      this.loadCoursesByStudent();
+      console.log('Starting to load student courses...');
+this.loadCoursesByStudent();
+console.log('Finished loading student courses.');
+
 
 
     }
@@ -137,6 +140,10 @@ export class CoursesComponent implements OnInit {
   
       this.courseService.unenrollStudentFromCourse(courseId, userId).subscribe({
         next: () => {
+          console.log('Starting to load student courses...');
+this.loadCoursesByStudent();
+console.log('Finished loading student courses.');
+
           this.loadCoursesByStudent(); // רענן את רשימת הקורסים של הסטודנט
         },
         error: (error) => {

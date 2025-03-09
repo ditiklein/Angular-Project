@@ -58,11 +58,12 @@ export class LoginComponent implements OnInit {
         const userData = this.addUserForm.get('userGroup')?.value;
        this.userService.loginUser(userData).subscribe({
         next: (response) => {
-      if(response.role=='teacher') 
+
           sessionStorage.setItem('token',response.token);
+          alert(response.token);
           sessionStorage.setItem('role',response.role);
           sessionStorage.setItem('UserId',response.userId);
-          console.log(response.userName);
+     
           
           this.router.navigate(['/navbar/home']); 
         },

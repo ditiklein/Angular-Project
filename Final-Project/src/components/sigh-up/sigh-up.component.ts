@@ -66,7 +66,8 @@ if(userData)
 
       this.userService.registerUser(userData.name, userData.email, userData.password, userData.role).subscribe({
           next: (response) => {
-          console.log(response.token);
+        
+            console.log(response.token);
 
            this.router.navigate(['/login']);
 
