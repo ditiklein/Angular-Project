@@ -113,6 +113,7 @@ console.log('Finished loading student courses.');
       });
     }
     isUserEnrolled(courseId: string): boolean {
+       
       
       return this.CoursesByStudent.some(course => course.id === courseId);
     }
@@ -122,11 +123,15 @@ console.log('Finished loading student courses.');
         this.courseService.getCoursesByStudentId(studentId).subscribe({
           next: (data) => {
             this.CoursesByStudent = data;
+            this.loading = false;
+
         
           },
           error: (error) => {
             console.error('Error fetching student courses:', error);
             this.openErrorDialog('שגיאה בטעינת קורסים של סטודנט');
+            this.loading = false;
+
           }
         });
       }

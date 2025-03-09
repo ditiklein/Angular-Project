@@ -58,9 +58,9 @@ export class LoginComponent implements OnInit {
         const userData = this.addUserForm.get('userGroup')?.value;
        this.userService.loginUser(userData).subscribe({
         next: (response) => {
+          sessionStorage.setItem('UserName', userData.email);
 
           sessionStorage.setItem('token',response.token);
-          alert(response.token);
           sessionStorage.setItem('role',response.role);
           sessionStorage.setItem('UserId',response.userId);
      
