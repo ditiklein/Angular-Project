@@ -34,14 +34,7 @@ button[color="primary"] {
 }
 
 
-.body {
-  background-image: url('../../images/aaa.jpg');
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-}
+
 
 .black-button mat-icon {
   margin-right: 8px; /* מרווח בין האיקון לטקסט */

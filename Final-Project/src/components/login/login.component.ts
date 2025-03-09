@@ -61,7 +61,9 @@ export class LoginComponent implements OnInit {
       if(response.role=='teacher') 
           sessionStorage.setItem('token',response.token);
           sessionStorage.setItem('role',response.role);
-          sessionStorage.setItem('UserId',response.userId)
+          sessionStorage.setItem('UserId',response.userId);
+          console.log(response.userName);
+          
           this.router.navigate(['/navbar/home']); 
         },
         error: (err) => {

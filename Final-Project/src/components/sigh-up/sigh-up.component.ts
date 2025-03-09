@@ -59,11 +59,15 @@ export class SighUpComponent implements OnInit {
 
     if (this.addUserForm.valid) {
       const userData = this.addUserForm.get('userGroup')?.value;
+if(userData)
+  sessionStorage.setItem('UserName', userData.name);
+
       console.log('📤 שולחת לשרת:', userData);
 
       this.userService.registerUser(userData.name, userData.email, userData.password, userData.role).subscribe({
           next: (response) => {
           console.log(response.token);
+
            this.router.navigate(['/login']);
 
         },

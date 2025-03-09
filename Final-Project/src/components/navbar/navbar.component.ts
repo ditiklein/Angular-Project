@@ -10,12 +10,12 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   imports: [    RouterLinkActive, 
     RouterLink,
     RouterOutlet,MatToolbarModule,  // ✅ הוספנו את ה-Toolbar
-        MatButtonModule,    MatIconModule,
+        MatButtonModule,    MatIconModule    
 
 ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+           letter:string=sessionStorage.getItem('UserName')||''[0]
 }
